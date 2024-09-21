@@ -1,6 +1,6 @@
 const button= document.getElementById('button');
 const audioElement =document.getElementById('audio') 
-
+const jokeText =document.getElementById('jokeText')
 
 
 // VoiceRSS Javascript SDK
@@ -46,7 +46,9 @@ async function getJokes() {
         
         // Text to speech
         tellMe(joke);
-        
+        //JokeText Box 
+        jokeText.textContent =joke;
+        console.log(jokeText)
         // Disabled Buuton
         toggleButton();
     }catch(error){
